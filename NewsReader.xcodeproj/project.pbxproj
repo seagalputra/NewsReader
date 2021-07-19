@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,8 +48,33 @@
 				F33D197A340F9F9697CBE785 /* Pods-NewsReader.debug.xcconfig */,
 				7F74B242181E6FEA6B51B0DB /* Pods-NewsReader.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D500CB5326A5D73D0041CA23 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D5509D7026A5CF3A00A5587D /* AppDelegate.swift */,
+				D5509D7226A5CF3A00A5587D /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D500CB5426A5D74E0041CA23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5509D7426A5CF3A00A5587D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D500CB5526A5D75D0041CA23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5509D7626A5CF3A00A5587D /* Main.storyboard */,
+				D5509D7B26A5CF3F00A5587D /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D5509D6426A5CF3900A5587D = {
@@ -73,12 +98,10 @@
 		D5509D6F26A5CF3A00A5587D /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
-				D5509D7026A5CF3A00A5587D /* AppDelegate.swift */,
-				D5509D7226A5CF3A00A5587D /* SceneDelegate.swift */,
-				D5509D7426A5CF3A00A5587D /* ViewController.swift */,
-				D5509D7626A5CF3A00A5587D /* Main.storyboard */,
+				D500CB5326A5D73D0041CA23 /* Base */,
+				D500CB5426A5D74E0041CA23 /* Controller */,
+				D500CB5526A5D75D0041CA23 /* View */,
 				D5509D7926A5CF3F00A5587D /* Assets.xcassets */,
-				D5509D7B26A5CF3F00A5587D /* LaunchScreen.storyboard */,
 				D5509D7E26A5CF3F00A5587D /* Info.plist */,
 			);
 			path = NewsReader;
