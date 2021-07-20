@@ -7,4 +7,5 @@ target 'NewsReader' do
 
   # Pods for NewsReader
   pod 'Alamofire', '~> 5.4'
+  pod 'AlamofireImage', '~> 4.1'
 end
