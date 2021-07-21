@@ -23,6 +23,7 @@ class NewsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.newsTableView.dataSource = self
+        self.newsTableView.delegate = self
         self.newsTableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsCell")
         
         fetchNews() { result in
@@ -61,6 +62,12 @@ class NewsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let detail = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsDetailViewControllerScene") as? NewsDetailViewController else { return }
+        
+        detail.news = self.articles[indexPath.row]
+        
+        self.navigationController?.pushViewController(detail, animated: true)
     }
 }
 
@@ -78,7 +85,7 @@ extension NewsTableViewController {
         }
     }
     
-    // TODO: Make this as UIImage extensions
+    // TODO: DUPLICATED CODE! Make this as UIImage extensions
     func fetchImage(url: String, completion: @escaping (UIImage?) -> Void) {
         let imageDownloader = ImageDownloader()
         let imageUrl = URLRequest(url: URL(string: url)!)

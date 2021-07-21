@@ -17,20 +17,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1g-de-W6r">
-                        <rect key="frame" x="16" y="44" width="231" height="19.5"/>
+                        <rect key="frame" x="20" y="44" width="223" height="19.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="ar6-eK-ykW">
-                        <rect key="frame" x="263" y="16" width="96" height="96"/>
+                        <rect key="frame" x="259" y="16" width="96" height="96"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="4t0-NP-21T"/>
                             <constraint firstAttribute="width" constant="96" id="h1D-uA-wDI"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source - Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGq-nW-gtM">
-                        <rect key="frame" x="16" y="21" width="231" height="15"/>
+                        <rect key="frame" x="20" y="21" width="223" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,14 +38,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="ar6-eK-ykW" secondAttribute="bottom" constant="16" id="4Db-t0-ImQ"/>
-                    <constraint firstItem="c1g-de-W6r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Hlg-fW-uAb"/>
+                    <constraint firstItem="c1g-de-W6r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Hlg-fW-uAb"/>
                     <constraint firstItem="ar6-eK-ykW" firstAttribute="leading" secondItem="CGq-nW-gtM" secondAttribute="trailing" constant="16" id="JQA-Cg-mlh"/>
-                    <constraint firstItem="CGq-nW-gtM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="K8k-Ki-bwX"/>
+                    <constraint firstItem="CGq-nW-gtM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="K8k-Ki-bwX"/>
                     <constraint firstItem="ar6-eK-ykW" firstAttribute="leading" secondItem="c1g-de-W6r" secondAttribute="trailing" constant="16" id="Tdd-jq-fol"/>
                     <constraint firstItem="c1g-de-W6r" firstAttribute="top" secondItem="CGq-nW-gtM" secondAttribute="bottom" constant="8" symbolic="YES" id="c1Q-aQ-6d2"/>
                     <constraint firstItem="CGq-nW-gtM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="ccd-aP-Db9"/>
                     <constraint firstItem="ar6-eK-ykW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="gE8-g4-ico"/>
-                    <constraint firstAttribute="trailing" secondItem="ar6-eK-ykW" secondAttribute="trailing" constant="16" id="tU8-c9-Fm4"/>
+                    <constraint firstAttribute="trailing" secondItem="ar6-eK-ykW" secondAttribute="trailing" constant="20" id="tU8-c9-Fm4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
