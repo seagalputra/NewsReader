@@ -102,7 +102,13 @@
                             <constraint firstItem="KEj-wD-xrR" firstAttribute="top" secondItem="Nyr-4J-VEy" secondAttribute="bottom" constant="20" id="wJg-l1-ArR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="pbb-rd-wqe"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="pbb-rd-wqe">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="link" catalog="system" id="wVL-yL-lbS">
+                            <connections>
+                                <action selector="readNews:" destination="xeV-i5-wF0" id="A4m-Ct-ADg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="newsDetailAdditionalData" destination="MD5-sq-LX0" id="sGK-zk-gse"/>
                         <outlet property="newsDetailContent" destination="KEj-wD-xrR" id="4kb-W3-5Dg"/>
@@ -112,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhk-Zd-iw1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173.91304347826087" y="788.83928571428567"/>
+            <point key="canvasLocation" x="-752" y="775"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dSX-fv-LZT">
@@ -130,10 +136,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71m-Gy-hjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-736.23188405797111" y="788.83928571428567"/>
+            <point key="canvasLocation" x="-1643" y="775"/>
         </scene>
     </scenes>
     <resources>
+        <image name="link" catalog="system" width="128" height="122"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

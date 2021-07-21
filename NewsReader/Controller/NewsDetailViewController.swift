@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 import AlamofireImage
 
 class NewsDetailViewController: UIViewController {
@@ -31,6 +32,12 @@ class NewsDetailViewController: UIViewController {
             }
             self.newsDetailContent.text = result.content
         }
+    }
+    
+    @IBAction func readNews(_ sender: Any) {
+        let webViewController = SFSafariViewController(url: URL(string: news?.url! ?? "http://www.apple.com")!)
+        
+        present(webViewController, animated: true, completion: nil)
     }
 }
 
