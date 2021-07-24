@@ -28,7 +28,11 @@ class NewsDetailViewController: UIViewController {
             }
             
             if let url = result.urlToImage {
-                fetchImage(url: url) { image in self.newsDetailImage.image = image }
+                UIImage.fetchImage(url) { image, error in
+                    guard error == nil else { self.newsDetailImage.image = UIImage(named: "empty"); return }
+                    
+                    self.newsDetailImage.image = image
+                }
             }
             self.newsDetailContent.text = result.content
         }
@@ -38,21 +42,5 @@ class NewsDetailViewController: UIViewController {
         let webViewController = SFSafariViewController(url: URL(string: news?.url! ?? "http://www.apple.com")!)
         
         present(webViewController, animated: true, completion: nil)
-    }
-}
-
-extension NewsDetailViewController {
-    // TODO: DUPLICATED CODE! Make this as UIImage extensions
-    func fetchImage(url: String, completion: @escaping (UIImage?) -> Void) {
-        let imageDownloader = ImageDownloader()
-        let imageUrl = URLRequest(url: URL(string: url)!)
-        
-        imageDownloader.download(imageUrl, completion: { response in
-            if case .success(let image) = response.result {
-                completion(image)
-            } else {
-                completion(UIImage(named: "empty"))
-            }
-        })
     }
 }
